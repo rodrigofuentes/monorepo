@@ -1,0 +1,27 @@
+{
+  "name": "coderealm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigofuentes/monorepo.git"
+  },
+  "keywords": [
+    "react",
+    "monorepo",
+    "yarn",
+    "workspaces",
+    "lerna",
+    "pnpm"
+  ],
+  "author": "Rodrigo Fuentes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigofuentes/monorepo/issues"
+  },
+  "homepage": "https://github.com/rodrigofuentes/monorepo#readme"
+}
