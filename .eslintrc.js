@@ -1,10 +1,17 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es2021: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'standard'],
+  extends: [
+    'plugin:react/recommended',
+    'prettier',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    'standard',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -14,11 +21,20 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
+  settings: {
+    react: {
+      version: 'latest',
+    },
+  },
   rules: {
     'comma-dangle': [
       'error',
       {
-        objects: 0,
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
       },
     ],
   },
