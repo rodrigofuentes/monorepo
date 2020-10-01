@@ -23,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/rodrigofuentes/monorepo/issues"
   },
-  "homepage": "https://github.com/rodrigofuentes/monorepo#readme"
+  "homepage": "https://github.com/rodrigofuentes/monorepo#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "typescript": "^4.0.3"
+  }
 }
