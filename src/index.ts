@@ -3,3 +3,5 @@ function add(num1, num2) {
 }
 
 console.log(add(7, 3))
+
+export default add
