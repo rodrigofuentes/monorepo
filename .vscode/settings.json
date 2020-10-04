@@ -1,7 +1,11 @@
 {
+  "workbench.colorCustomizations": {
+    "titleBar.border": "#414245" // remove this
+  },
   "editor.formatOnSave": true,
   "prettier.requireConfig": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

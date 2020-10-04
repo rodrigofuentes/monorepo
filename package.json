@@ -1,12 +1,13 @@
 {
   "name": "monorepo",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier '**/*.{js,ts,tsx,json,md}' --write"
+    "format": "prettier '**/*.{js,ts,tsx,json,md}' --write",
+    "rollup": "rollup 'src/index.ts' --file 'dist/bundle.js' --format cjs "
   },
   "husky": {
     "hooks": {
@@ -38,6 +39,7 @@
   },
   "homepage": "https://github.com/rodrigofuentes/monorepo#readme",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "eslint": "^7.10.0",
@@ -52,6 +54,7 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "rollup": "^2.28.2",
     "typescript": "^4.0.3"
   }
 }
