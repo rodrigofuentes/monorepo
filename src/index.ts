@@ -1,7 +1,7 @@
-function add(num1, num2) {
-  return num1 + num2
+import React from "react"
+
+export const Button = () => {
+  return (
+    <button onClick={()=>alert("clicked!")}>Click me!</button>
+  )
 }
-
-console.log(add(7, 3))
-
-export default add
