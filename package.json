@@ -1,7 +1,12 @@
 {
   "name": "monorepo",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "private": true,
   "scripts": {
     "lint": "eslint '**/*.{js,ts,tsx}'",
@@ -41,7 +46,11 @@
   },
   "homepage": "https://github.com/rodrigofuentes/monorepo#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
@@ -55,9 +64,18 @@
     "eslint-plugin-standard": "^4.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
+    "postcss": "^8.3.11",
     "prettier": "^2.4.1",
-    "react": "^17.0.2",
+    "rimraf": "^3.0.2",
     "rollup": "^2.58.3",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
     "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
   }
 }
