@@ -13,18 +13,9 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier '**/*.{js,ts,tsx,json,md}' --write",
     "rollup": "rollup 'src/index.ts' --file 'dist/bundle.js' --format cjs ",
-    "prettier": "prettier"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "npx run lint:fix",
-      "npx prettier --write"
-    ]
+    "prettier": "prettier",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -46,13 +37,23 @@
   },
   "homepage": "https://github.com/rodrigofuentes/monorepo#readme",
   "devDependencies": {
+    "@babel/core": "^7.19.6",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "babel-loader": "^8.2.5",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^14.1.1",
@@ -62,6 +63,7 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-storybook": "^0.6.6",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "postcss": "^8.3.11",
